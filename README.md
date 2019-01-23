@@ -8,5 +8,5 @@ This app was developed to help connect tomatoe farmers and buyer by:
 1.clone the repo
 2.download and open repo on android android studio
        
-       ![login](https://github.com/Daggie1/BuySellApplication/blob/master/app/src/main/res/drawable/login.png)
+![ScreenShot](https://raw.githubusercontent.com/i-saumitra/Voice-controlled-MP3-Player/master/screenshot.jpg)
      
