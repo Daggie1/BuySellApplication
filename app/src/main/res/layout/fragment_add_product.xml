@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".UI.fragments.AddProductActivity">
+
+    <ImageView
+        android:id="@+id/addProductImageview"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/add_photo"
+        android:elevation="8dp"
+        />
+    <AutoCompleteTextView
+        android:id="@+id/addproductnametxt"
+        android:layout_gravity="left"
+        android:hint="Tomatoes Variety"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <AutoCompleteTextView
+        android:id="@+id/addproductPricetxt"
+        android:layout_gravity="left"
+        android:inputType="number"
+        android:hint="amount"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+        <TextView
+            android:text="KSH"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <AutoCompleteTextView
+        android:id="@+id/addproducDesctxt"
+        android:layout_gravity="left"
+
+        android:hint="Description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/addProductBtn"
+        android:background="@color/colorPrimary"
+        android:text="Post"
+        android:textColor="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

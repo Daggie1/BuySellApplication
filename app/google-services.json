@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1025145160244",
+    "firebase_url": "https://tomatoesapp-bc48e.firebaseio.com",
+    "project_id": "tomatoesapp-bc48e",
+    "storage_bucket": "tomatoesapp-bc48e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1025145160244:android:32038b6cd4674af5",
+        "android_client_info": {
+          "package_name": "com.example.anonymous.tomatoesapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1025145160244-6f5keotis8q90c4v27qrf5ckiu3ktibm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.anonymous.tomatoesapp",
+            "certificate_hash": "00cdb9f150b27b58c4342be498b361106137d14b"
+          }
+        },
+        {
+          "client_id": "1025145160244-0t7pn8gqur9r3conbf83rja7eokcuup1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAd9C0BhoUdlsbBXXlUbAWEia5nDrUhbVI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1025145160244-0t7pn8gqur9r3conbf83rja7eokcuup1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

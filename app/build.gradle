@@ -1,0 +1,62 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.example.anonymous.tomatoesapp"
+        minSdkVersion 15
+        targetSdkVersion 28
+        multiDexEnabled true
+        vectorDrawables.useSupportLibrary=true
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        resValue "string", "google_maps_key", (project.findProperty("GOOGLE_MAPS_API_KEY") ?: "")
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    //cardview
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    //circularimageview
+    implementation 'com.mikhaellopez:circularimageview:3.2.0'
+    implementation 'de.hdodenhof:circleimageview:2.2.0'
+    //firebase
+    implementation 'com.google.firebase:firebase-auth:11.6.0'
+    implementation 'com.google.firebase:firebase-database:11.6.0'
+    implementation 'com.google.firebase:firebase-storage:11.6.0'
+    //circularmenu
+    implementation 'com.nightonke:boommenu:2.1.1'
+    //googlemaps
+    implementation 'com.firebase:geofire-android:2.1.1'
+    implementation 'com.google.android.gms:play-services:11.6.0'
+    //country Code
+    implementation 'com.hbb20:ccp:2.2.3'
+    //implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.github.clans:fab:1.6.4'
+    implementation 'com.android.support:support-v4:28.0.0'
+    //mpesa
+    //implementation project(':mpesa')
+    implementation 'com.bdhobare:mpesa:0.0.6'
+    implementation 'com.afollestad.material-dialogs:core:0.9.5.0'
+    //implementation 'com.google.android.gms:play-services-maps:16.0.0'
+    //glide pic_load_libary
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    // implementation 'com.google.android.gms:play-services-maps:16.0.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+}
+
+apply plugin: 'com.google.gms.google-services'

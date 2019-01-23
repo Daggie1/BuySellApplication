@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colodarkish"
+    android:orientation="vertical"
+    tools:context=".UI.fragments.OurTeamFragment">
+
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        card_view:cardCornerRadius="4dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <TextView
+                android:text="Meet Our Team"
+                android:textSize="23sp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:layout_gravity="center"
+                android:src="@drawable/chris"
+                android:layout_width="180dp"
+                android:layout_height="180dp" />
+            <TextView
+                android:text="Chris George Mutunga"
+                android:layout_width="wrap_content"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="CEO"
+                android:textStyle="normal"
+                android:textSize="23sp"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_height="wrap_content" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:layout_gravity="center"
+                android:src="@drawable/mesh"
+                android:layout_width="80dp"
+                android:layout_height="80dp" />
+            <TextView
+                android:text="Meshack Mugambi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="Pest and Disease Specialist"
+                android:textStyle="normal"
+                android:textSize="23sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:layout_gravity="center"
+                android:src="@drawable/defaultprofile"
+                android:layout_width="80dp"
+                android:layout_height="80dp" />
+            <TextView
+                android:text="Joseph Kamande"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="Inputs Specialist"
+                android:textStyle="normal"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <com.mikhaellopez.circularimageview.CircularImageView
+                android:layout_gravity="center"
+                android:src="@drawable/daggy"
+                android:layout_width="80dp"
+                android:layout_height="80dp" />
+            <TextView
+                android:text="Daggie"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="Company Ambassador"
+                android:textStyle="normal"
+                android:textSize="16sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

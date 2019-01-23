@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colodarkish"
+    android:layout_height="match_parent"
+    tools:context=".UI.fragments.AboutUsFragment">
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:layout_marginTop="45dp"
+        android:layout_width="50dp"
+        android:layout_gravity="center"
+        android:src="@drawable/applogo"
+        android:layout_height="50dp" />
+    <TextView
+        android:layout_width="match_parent"
+        android:text="Tomatoe comapany is the number one company connecting between tomatoe farmer and a the buyer.helps in"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="match_parent"
+        android:text="->Cuts off the middleman"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="match_parent"
+        android:text="->effective ways of buying and selling of tomatoes"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_width="match_parent"
+        android:text="->increased profit"
+        android:layout_height="wrap_content" />
+
+
+    <TextView
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:text="all rights reserved"
+        android:layout_height="wrap_content" />
+</LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="8dp"
+    android:orientation="vertical"
+    android:background="@color/dark_gray"
+    tools:context=".UI.fragments.AdviceFrament">
+<TextView
+    android:layout_marginTop="15dp"
+    android:text="Size of Land (ha)"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+    <EditText
+        android:layout_marginBottom="15dp"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        android:inputType="number"
+        android:id="@+id/size_of_land"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/processbtn"
+        android:text="Process"
+        android:background="@color/colorPrimaryDark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorWhite"/>
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/result_txt"
+        android:text="result....."/>
+
+</LinearLayout>

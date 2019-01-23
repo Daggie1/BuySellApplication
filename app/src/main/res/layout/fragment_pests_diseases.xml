@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colodarkish"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    tools:context=".UI.fragments.RecentFragment">
+<GridLayout
+    android:id="@+id/services_recyclerview"
+    android:layout_width="match_parent"
+   android:columnCount="2"
+    android:columnOrderPreserved="false"
+
+    android:alignmentMode="alignMargins"
+    android:rowCount="3"
+    android:padding="14dp"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:layout_gravity="center"
+        android:layout_margin="8dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        card_view:cardCornerRadius="4dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <ImageView
+                android:src="@drawable/pest"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/pest_desiese_image"
+                android:layout_width="70dp"
+                android:layout_height="70dp" />
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:text="Pest and Diseases"
+                android:id="@+id/pest_disease_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/good_farming_view"
+        android:layout_gravity="center"
+
+        android:layout_margin="8dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        card_view:cardCornerRadius="4dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <ImageView
+                android:src="@drawable/good"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/good_farming_image"
+                android:layout_width="70dp"
+                android:layout_height="70dp" />
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:text="Good Farming practises"
+                android:id="@+id/good_farming_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/card_view"
+        android:layout_gravity="center"
+
+        android:layout_margin="8dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        card_view:cardCornerRadius="4dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <ImageView
+                android:src="@drawable/advice"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/advice_image"
+                android:layout_width="70dp"
+                android:layout_height="70dp" />
+            <TextView
+                android:text="Farm Plan"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/advice_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/Aboutus_card_view"
+        android:layout_gravity="center"
+
+        android:layout_margin="8dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        card_view:cardCornerRadius="4dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <ImageView
+                android:src="@drawable/about"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/about_us_image"
+                android:layout_width="70dp"
+                android:layout_height="70dp" />
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:text="About Us"
+                android:id="@+id/about_us_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/contact_card_view"
+        android:layout_gravity="center"
+
+        android:layout_margin="8dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        card_view:cardCornerRadius="4dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <ImageView
+                android:src="@drawable/contact"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/contact_us_image"
+                android:layout_width="70dp"
+                android:layout_height="70dp" />
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:text="Contact Us"
+                android:id="@+id/contact_us_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/our_team_card_view"
+        android:layout_gravity="center"
+        android:layout_margin="8dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        card_view:cardCornerRadius="4dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+            <ImageView
+                android:src="@drawable/team"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/our_team_image"
+                android:layout_width="70dp"
+                android:layout_height="70dp" />
+            <TextView
+                android:text="Our Team"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/our_team_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+
+</GridLayout>
+
+</FrameLayout>

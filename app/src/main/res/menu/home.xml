@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:icon="@drawable/about_us"
+        android:id="@+id/idAbout_us"
+        android:orderInCategory="100"
+        android:title="About us"
+        app:showAsAction="never" />
+    <item
+        android:icon="@drawable/testmonies"
+        android:id="@+id/idTestimonies"
+        android:orderInCategory="100"
+        android:title="Testimonies"
+        app:showAsAction="never" />
+    <item
+        android:icon="@drawable/contact"
+        android:id="@+id/idConatct_us"
+        android:orderInCategory="100"
+        android:title="Contact Us"
+        app:showAsAction="never" />
+</menu>

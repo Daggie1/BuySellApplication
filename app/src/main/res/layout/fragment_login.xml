@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".UI.fragments.Login">
+   <LinearLayout
+       android:layout_gravity="center"
+       android:orientation="vertical"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content">
+<TextView
+    android:textColor="@color/colorPrimaryDark"
+    android:textStyle="bold"
+    android:text="Sign Up"
+    android:textSize="23sp"
+    android:layout_marginLeft="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+   <android.support.v7.widget.CardView
+       android:layout_margin="10dp"
+       android:elevation="10dp"
+       android:layout_gravity="center"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:orientation="vertical"
+          android:layout_height="wrap_content">
+         <android.support.design.widget.TextInputLayout
+             android:layout_width="match_parent"
+             android:layout_marginBottom="10dp"
+             android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/login_emailtxt"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+         </android.support.design.widget.TextInputLayout>
+         <android.support.design.widget.TextInputLayout
+             android:layout_width="match_parent"
+             android:layout_marginBottom="10dp"
+             android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/login_pwdtxt"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+         </android.support.design.widget.TextInputLayout>
+      </LinearLayout>
+   </android.support.v7.widget.CardView>
+   <LinearLayout
+       android:orientation="horizontal"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content">
+      <TextView
+
+          android:textStyle="bold"
+          android:text=" Don't have an account?"
+
+          android:layout_marginLeft="10dp"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content" />
+      <TextView
+          android:id="@+id/back_to_signuptxt"
+          android:textColor="@color/colorPrimaryDark"
+          android:textStyle="bold"
+          android:text="Signup!"
+          android:textSize="23sp"
+          android:layout_marginLeft="10dp"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content" />
+   </LinearLayout>
+   </LinearLayout>
+<Button
+    android:layout_gravity="bottom"
+    android:id="@+id/loginbtn"
+    android:textColor="@color/colorWhite"
+    android:background="@color/colorPrimaryDark"
+    android:text="Sign in"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+</LinearLayout>
