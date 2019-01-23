@@ -8,5 +8,5 @@ This app was developed to help connect tomatoe farmers and buyer by:
 1.clone the repo
 2.download and open repo on android android studio
        
-<img src="../master/screenshot.jpg?raw=true" width="100" height="100" />
+<img src="../master/app/src/main/res/drawable/login.png?raw=true" width="100" height="100" />
      
