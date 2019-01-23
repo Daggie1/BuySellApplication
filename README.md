@@ -4,9 +4,9 @@ This app was developed to help connect tomatoe farmers and buyer by:
 3.Buyers can chat farmers via whatsapp ,sea farmers location,buy the product via Mpesa
 4.Farmers can Delete and update product they posted
 
---------to install------
-1.clone the repo
-2.download and open repo on android android studio
+--------to install------</br>
+1.clone the repo</br>
+2.download and open repo on android android studio</br>
   
 <h2>ScreenShots</h2>
 
