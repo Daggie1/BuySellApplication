@@ -8,5 +8,5 @@ This app was developed to help connect tomatoe farmers and buyer by:
 1.clone the repo
 2.download and open repo on android android studio
        
-![ScreenShot](https://raw.githubusercontent.com/i-saumitra/Voice-controlled-MP3-Player/master/screenshot.jpg)
+<img src="../master/screenshot.jpg?raw=true" width="100" height="100" />
      
