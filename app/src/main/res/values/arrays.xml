@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="nav_item_activity_titles">
+        <item>Home</item>
+        <item>Statistics</item>
+        <item>Data</item>
+        <item>Settings</item>
+    </string-array>
+</resources>

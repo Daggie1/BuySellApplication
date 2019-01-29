@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/title_bottom_marg"
+        android:text="These are your data statistics"
+        android:textColor="#fff"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="A priory probabilities"
+        android:textColor="#fff"
+        android:textSize="16sp"/>
+
+    <GridView
+        android:id="@+id/apriory_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:horizontalSpacing="4dp"
+        android:verticalSpacing="4dp"
+        android:numColumns="2"
+        android:scrollbars="horizontal" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="A posteriory probabilities"
+        android:textColor="#fff"
+        android:textSize="16sp"/>
+
+    <GridView
+        android:id="@+id/aposteriory_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:horizontalSpacing="4dp"
+        android:verticalSpacing="4dp"
+        android:numColumns="2"
+        android:scrollbars="horizontal" />
+</LinearLayout>

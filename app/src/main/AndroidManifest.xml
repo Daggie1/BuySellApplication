@@ -20,7 +20,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".UI.activities.HomeActivity"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".UI.activities.RecentMasterDetails"
             android:parentActivityName=".UI.activities.HomeActivity" />
@@ -65,8 +65,9 @@
             android:name=".UI.activities.Add_Update_Product_Activity"
             android:parentActivityName=".UI.activities.HomeActivity" />
         <activity android:name=".UI.activities.SignUpActivity" />
-        <activity android:name=".UI.activities.ServiesActivity"
-            android:parentActivityName=".UI.activities.HomeActivity"></activity>
+        <activity
+            android:name=".UI.activities.ServiesActivity"
+            android:parentActivityName=".UI.activities.HomeActivity" />
         <activity android:name=".UI.activities.SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -74,17 +75,26 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".UI.activities.MainActivity"/>
-        <activity android:name=".UI.fragments.AdviceFrament"
-            android:parentActivityName=".UI.activities.HomeActivity"/>
-        <activity android:name=".UI.fragments.GoodFarmingFragment"
-            android:parentActivityName=".UI.activities.HomeActivity"/>
-        <activity android:name=".UI.fragments.AboutUsFragment"
-            android:parentActivityName=".UI.activities.HomeActivity"/>
-        <activity android:name=".UI.fragments.OurTeamFragment"
-            android:parentActivityName=".UI.activities.HomeActivity"/>
-        <activity android:name=".UI.fragments.PestAndDiseasesFragment"
-            android:parentActivityName=".UI.activities.HomeActivity"/>
+        <activity android:name=".UI.activities.MainActivity" />
+        <activity
+            android:name=".UI.fragments.AdviceFrament"
+            android:parentActivityName=".UI.activities.HomeActivity" />
+        <activity
+            android:name=".UI.fragments.GoodFarmingFragment"
+            android:parentActivityName=".UI.activities.HomeActivity" />
+        <activity
+            android:name=".UI.fragments.AboutUsFragment"
+            android:parentActivityName=".UI.activities.HomeActivity" />
+        <activity
+            android:name=".UI.fragments.OurTeamFragment"
+            android:parentActivityName=".UI.activities.HomeActivity" />
+        <activity
+            android:name=".UI.fragments.PestAndDiseasesFragment"
+            android:parentActivityName=".UI.activities.HomeActivity" />
+        <activity android:name=".InferenceEngine.MainActivity">
+
+        </activity>
+        <activity android:name=".UI.activities.DiagnosisActivity"></activity>
     </application>
 
 </manifest>

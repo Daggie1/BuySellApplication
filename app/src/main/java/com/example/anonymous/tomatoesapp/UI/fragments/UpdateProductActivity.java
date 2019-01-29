@@ -9,8 +9,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.example.anonymous.tomatoesapp.R;
@@ -35,7 +37,7 @@ public class UpdateProductActivity extends Fragment {
     public UpdateProductActivity() {
         // Required empty public constructor
     }
-        TextView product_nametxt, product_pricetxt,product_descriptiontxt;
+        EditText product_nametxt, product_pricetxt,product_descriptiontxt;
         ImageView product_image;
         Button update_btn,del_Btn;
 
@@ -55,9 +57,9 @@ public class UpdateProductActivity extends Fragment {
                 Bundle savedInstanceState) {
             // Inflate the layout for this fragment
             View view= inflater.inflate(R.layout.fragment_update_product, container, false);
-            product_nametxt=(TextView) view.findViewById(R.id.update_product_name);
-            product_descriptiontxt=(TextView) view.findViewById(R.id.update_product_desc);
-            product_pricetxt=(TextView) view.findViewById(R.id.update_product_price);
+            product_nametxt=(EditText) view.findViewById(R.id.update_product_name);
+            product_descriptiontxt=(EditText) view.findViewById(R.id.update_product_desc);
+            product_pricetxt=(EditText) view.findViewById(R.id.update_product_price);
             update_btn=(Button) view.findViewById(R.id.update_btn);
             del_Btn=(Button) view.findViewById(R.id.delete_btn);
             product_image=(ImageView) view.findViewById(R.id.update_product_image);
@@ -115,7 +117,10 @@ public void updatingProducts(){
                     if(dataSnapshot.exists()){
                         for(DataSnapshot productsnapshot:dataSnapshot.getChildren()){
 
-                            updateproduct(dbquery.getRef(),product_id,product_name,product_desc,product_price,product_urll);
+                            productsnapshot.getRef().child("productName").setValue(product_name);
+                            productsnapshot.getRef().child("price").setValue(product_price);
+                            productsnapshot.getRef().child("description").setValue(product_desc);
+                            Toast.makeText(getActivity(),"Updated successfully!",Toast.LENGTH_LONG).show();
                         }
                     }
                 }

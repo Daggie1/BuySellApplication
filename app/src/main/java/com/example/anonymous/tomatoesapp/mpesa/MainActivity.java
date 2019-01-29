@@ -9,6 +9,8 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.content.LocalBroadcastManager;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -51,40 +53,68 @@ public class MainActivity extends AppCompatActivity implements AuthListener, Mpe
 
     Button pay;
     ProgressDialog dialog;
-    EditText phone;
+    EditText phone,quantity;
+    TextView total;
     ImageView productimage;
-TextView shipping_product_name,shipping_product_price,shipping_product_desc,shipping_email,shipping_product_location;
+TextView shipping_product_name,shipping_product_price,shipping_email,shipping_product_location;
 
     private BroadcastReceiver mRegistrationBroadcastReceiver;
-    private String selectedproduct_name,selectedproduct_price,selectedproduct_picurl,selectedproduct_sellersLocation,selectedproduct_desc,sellersEmail;
+    private String selectedproduct_name,selectedproduct_price,selectedproduct_picurl,selectedproduct_sellersLocation,sellersEmail,selectedproduct_qty;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         selectedproduct_name=getIntent().getStringExtra("selectedproduct_name");
         selectedproduct_price=getIntent().getStringExtra("selectedproduct_price");
-        selectedproduct_desc=getIntent().getStringExtra("selectedproduct_desc");
+        selectedproduct_qty=getIntent().getStringExtra("selectedproduct_qty");
         selectedproduct_picurl=getIntent().getStringExtra("selectedproduct_picurl");
         selectedproduct_sellersLocation=getIntent().getStringExtra("selectedproduct_sellersloc");
         sellersEmail= FirebaseAuth.getInstance().getCurrentUser().getEmail();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_mpesa);
+        quantity=(EditText) findViewById(R.id.quantity);
+        total=(TextView) findViewById(R.id.total);
         //initializing
         shipping_email=(TextView) findViewById(R.id.shipping_emailail);
         shipping_product_name=(TextView) findViewById(R.id.shipping_productname);
         shipping_product_price=(TextView) findViewById(R.id.shipping_productprice);
-        shipping_product_desc=(TextView) findViewById(R.id.shipping_productdesc);
+
         shipping_product_location=(TextView) findViewById(R.id.shipping_location);
         productimage=(ImageView) findViewById(R.id.shippingImageview);
-        //setting
-        shipping_product_price.setText(selectedproduct_price);
+        pay = (Button)findViewById(R.id.pay);
+        phone = (EditText)findViewById(R.id.phone);
+        quantity.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                shipping_product_price.setText(selectedproduct_price);
+                total.setText(selectedproduct_price);
+            }
+
+            @Override
+            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable editable) {
+                if(quantity.getText().toString()!=""&&Integer.valueOf(quantity.getText().toString())<=Integer.valueOf(selectedproduct_qty)){
+               String tt=((Integer.valueOf(selectedproduct_price))*(Integer.valueOf(quantity.getText().toString()))+"");
+                shipping_product_price.setText(tt);
+                    total.setText(tt);
+                }else {
+                    Toast.makeText(MainActivity.this,"Quantity should be less or equal to sellers Quantity",Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+
         shipping_product_location.setText(selectedproduct_sellersLocation);
-        shipping_product_desc.setText(selectedproduct_desc);
+
         shipping_email.setText(sellersEmail);
         shipping_product_name.setText(selectedproduct_name);
         Glide.with(MainActivity.this).load(selectedproduct_picurl).into(productimage);
 
-        pay = (Button)findViewById(R.id.pay);
-        phone = (EditText)findViewById(R.id.phone);
+
 
         Mpesa.with(this, CONSUMER_KEY, CONSUMER_SECRET);
         dialog = new ProgressDialog(this);
@@ -95,7 +125,7 @@ TextView shipping_product_name,shipping_product_price,shipping_product_desc,ship
             @Override
             public void onClick(View view) {
                 String p = phone.getText().toString();
-                int a = Integer.valueOf(selectedproduct_price);
+                int a = (Integer.valueOf(selectedproduct_price))*(Integer.valueOf(quantity.getText().toString()));
                 if (p.isEmpty()){
                     phone.setError("Enter phone.");
                     return;

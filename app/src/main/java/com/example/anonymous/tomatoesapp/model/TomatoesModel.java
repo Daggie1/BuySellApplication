@@ -6,12 +6,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class TomatoesModel {
-    String productName, description, sellerId, productId, lat, longt, mapmarker_name,price,product_pictureUrl;
+    String productName, description, sellerId, productId, lat, longt, mapmarker_name,price,product_pictureUrl,quantity;
 
     public TomatoesModel() {
     }
 
-    public TomatoesModel(String productName, String description, String sellerId, String productId, String lat, String longt, String mapmarker_name,String price, String product_pictureUrl) {
+    public TomatoesModel(String productName, String description, String sellerId, String productId, String lat, String longt, String mapmarker_name,String price, String product_pictureUrl,String quantity) {
         this.productName = productName;
         this.description = description;
         this.sellerId = sellerId;
@@ -21,6 +21,7 @@ public class TomatoesModel {
         this.mapmarker_name=mapmarker_name;
         this.price = price;
         this.product_pictureUrl=product_pictureUrl;
+        this.quantity=quantity;
     }
 
     public TomatoesModel(String productName, String description, String productId, String price, String product_pictureUrl) {
@@ -67,6 +68,10 @@ public class TomatoesModel {
 
     public String getProduct_pictureUrl() {
         return product_pictureUrl;
+    }
+
+    public String getQuantity() {
+        return quantity;
     }
 
     @Exclude

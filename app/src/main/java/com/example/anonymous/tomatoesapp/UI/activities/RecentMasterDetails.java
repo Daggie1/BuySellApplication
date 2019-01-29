@@ -39,7 +39,7 @@ public class RecentMasterDetails extends fragmentActivityLinker  implements OnMa
     String selectedproduct_id,marker;
     private GoogleMap mMap;
     TomatoesModel mTomatoesModel;
-    TextView product_name,product_price,product_description,product_marker;
+    TextView product_name,product_price,product_description,product_marker,quantity;
     ImageView product_image;
     Button buy_btn,chatBtn;
     private static final int DEFAULT_ZOOM = 15;
@@ -54,6 +54,7 @@ public class RecentMasterDetails extends fragmentActivityLinker  implements OnMa
         buy_btn=(Button) findViewById(R.id.details_buy_btn);
         product_image=(ImageView) findViewById(R.id.details_product_image);
         product_marker=(TextView) findViewById(R.id.markertxt);
+        quantity=(TextView) findViewById(R.id.quantitytxt);
 chatBtn=(Button)findViewById(R.id.details_chat_btn);
         loadContent(selectedproduct_id);
         buy_btn.setOnClickListener(new View.OnClickListener() {
@@ -65,6 +66,7 @@ chatBtn=(Button)findViewById(R.id.details_chat_btn);
                         newintent.putExtra("selectedproduct_desc",mTomatoesModel.getDescription());
                         newintent.putExtra("selectedproduct_sellersloc",mTomatoesModel.getMapmarker_name());
                         newintent.putExtra("selectedproduct_picurl",mTomatoesModel.getProduct_pictureUrl());
+                        newintent.putExtra("selectedproduct_qty",mTomatoesModel.getQuantity());
                         startActivity(newintent);
                     }
                 });
@@ -144,6 +146,8 @@ mTomatoesModel=tomatoesModel;
                         product_price.setText(tomatoesModel.getPrice());
                         product_description.setText(tomatoesModel.getDescription());
                         lat=Double.parseDouble(tomatoesModel.getLat());
+                        String qq=tomatoesModel.getQuantity()+"Kgs";
+                        quantity.setText(qq);
                         longt=Double.parseDouble(tomatoesModel.getLongt());
                         marker=tomatoesModel.getMapmarker_name();
                         product_marker.setText(tomatoesModel.getMapmarker_name());

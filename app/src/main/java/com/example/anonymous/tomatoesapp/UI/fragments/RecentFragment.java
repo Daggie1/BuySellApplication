@@ -163,6 +163,7 @@ buy_btn=(Button) itemView.findViewById(R.id.add_to_cartBtn);
                   newintent.putExtra("selectedproduct_desc",mtomatoesModel.getDescription());
                   newintent.putExtra("selectedproduct_sellersloc",mtomatoesModel.getMapmarker_name());
                   newintent.putExtra("selectedproduct_picurl",mtomatoesModel.getProduct_pictureUrl());
+                  newintent.putExtra("selectedproduct_qty",mtomatoesModel.getQuantity());
                   startActivity(newintent);
               }
           });

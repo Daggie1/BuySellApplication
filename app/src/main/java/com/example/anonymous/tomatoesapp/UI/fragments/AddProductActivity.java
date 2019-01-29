@@ -45,7 +45,7 @@ public class AddProductActivity extends Fragment {
    Button maddproductBtn;
     ImageView mproductPhoto;
     Boolean uploadStatus=false;
-AutoCompleteTextView mproductPrice,mproductName,mproductDesc;
+AutoCompleteTextView mproductPrice,mproductName,mproductDesc,mProductQuantity;
 String mcurrentLat,mCurrentLong;
     StorageReference photoref;
     DatabaseReference dbreference;
@@ -73,6 +73,7 @@ String mcurrentLat,mCurrentLong;
         mproductDesc=(AutoCompleteTextView) view.findViewById(R.id.addproducDesctxt);
         mproductName=(AutoCompleteTextView) view.findViewById(R.id.addproductnametxt);
         mproductPrice=(AutoCompleteTextView) view.findViewById(R.id.addproductPricetxt);
+        mProductQuantity=(AutoCompleteTextView) view.findViewById(R.id.addproductQuantitytxt);
 mproductPhoto=(ImageView) view.findViewById(R.id.addProductImageview);
 mproductPhoto.setOnClickListener(new View.OnClickListener() {
     @Override
@@ -133,6 +134,7 @@ maddproductBtn.setOnClickListener(new View.OnClickListener() {
                             String productname=mproductName.getText().toString().trim();
                             String productPrice=mproductPrice.getText().toString().trim();
                             String productDesc=mproductDesc.getText().toString().trim();
+                            String productQuantity=mProductQuantity.getText().toString().trim();
                             String picurl=downloadurl.toString();
                             String customerLong=sendeerLang;
                             String customerlat=senderlat;
@@ -140,7 +142,7 @@ maddproductBtn.setOnClickListener(new View.OnClickListener() {
                                 String id=dbreference.push().getKey();
                                 String sellerId= FirebaseAuth.getInstance().getCurrentUser().getUid();
 
-                                TomatoesModel newproduct=new TomatoesModel(productname,productDesc,sellerId,id,customerlat,customerLong,marker,productPrice,picurl);
+                                TomatoesModel newproduct=new TomatoesModel(productname,productDesc,sellerId,id,customerlat,customerLong,marker,productPrice,picurl,productQuantity);
                                 dbreference.child(id).setValue(newproduct);
                                 Toast.makeText(getActivity(),"added successfully",Toast.LENGTH_LONG).show();
 
